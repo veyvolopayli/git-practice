@@ -40,7 +40,7 @@ jobs:
 
     # Шаг для загрузки сгенерированного файла как артефакта
     - name: Upload Documentation Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: documentation
         path: person1/project_docs.md
