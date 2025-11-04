@@ -1,0 +1,22 @@
+name: Python application CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    - name: Run Python scripts
+      run: |
+        python file1.py
+        python file2.py
+        python file3.py
