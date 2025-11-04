@@ -27,3 +27,20 @@ jobs:
 
     - name: Test with unittest
       run: python -m unittest test_app.py
+
+    - name: Generate Documentation
+      run: |
+        cd person1
+        echo "# Документация проекта" > project_docs.md
+        echo "Версия проекта: $(cat VERSION.txt)" >> project_docs.md
+        echo "\n## Содержимое скриптов:\n" >> project_docs.md
+        echo '```python' >> project_docs.md
+        cat *.py >> project_docs.md
+        echo '```' >> project_docs.md
+
+    # Шаг для загрузки сгенерированного файла как артефакта
+    - name: Upload Documentation Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: documentation
+        path: project_docs.md
