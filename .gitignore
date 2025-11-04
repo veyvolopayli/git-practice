@@ -1,0 +1,16 @@
+# Папки IDE (PyCharm, VSCode и т.д.)
+.idea/
+.vscode/
+
+# Папки с кешем Python
+__pycache__/
+*.pyc
+
+# Папки виртуального окружения
+.venv/
+venv/
+env/
+
+# Вложенные репозитории из первой практической
+person2/
+person3/
