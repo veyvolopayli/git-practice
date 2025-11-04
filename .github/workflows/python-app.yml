@@ -17,6 +17,7 @@ jobs:
 
     - name: Run Python scripts
       run: |
+        cd person1
         python file1.py
         python file2.py
         python file3.py
