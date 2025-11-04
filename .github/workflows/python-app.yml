@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: documentation
-        path: project_docs.md
+        path: person1/project_docs.md
